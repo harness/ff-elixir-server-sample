@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="ctx" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ctx/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/ctx/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/ctx/src" />
+      <root url="file://$PROJECT_DIR$/deps/ctx/src" />
+    </SOURCES>
+  </library>
+</component>

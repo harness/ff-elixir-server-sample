@@ -1,10 +1,15 @@
 defmodule Elixirsample do
 
-  def getFlag(pid) do
+  def getFlagLoop(pid) do
     x = true
     y = true
-
-    {:ok, result} = FFHelper.evaluate(pid, {"harnessdemodarkmode", "Elixir-test", false})
+    target = %{
+      identifier: "harness",
+      name: "Harness",
+      anonymous: false,
+      attributes: %{}
+    }
+    result = FFHelper.bool_variation(pid, "harnessappdemodarkmode", target, false)
 
     IO.puts "Flag: #{result}"
     Process.sleep(10000)
@@ -12,12 +17,11 @@ defmodule Elixirsample do
     if x != y do
       IO.puts "End of Loop"
     else
-      getFlag(pid)
+      getFlagLoop(pid)
     end
   end
 
-  def init do
+  def start do
     FFHelper.start_link()
   end
-
 end

@@ -48,10 +48,10 @@ iex -S mix
 
 Start the App and save the bucket pid
 ```shell
-iex> {:ok, pid} = Elixirsample.init
+iex> {:ok, pid} = Elixirsample.start
 ```
 
 Start the loop to print the flag value every 10 seconds
 ```shell
-iex> Elixirsample.getFlag(pid)
+iex> Elixirsample.getFlagLoop(pid)
 ```

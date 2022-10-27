@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lru" type="mix">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/lru/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/lru/ebin" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/lru/src" />
+      <root url="file://$PROJECT_DIR$/deps/lru/src" />
+    </SOURCES>
+  </library>
+</component>
