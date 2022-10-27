@@ -11,8 +11,8 @@ To sign up, https://app.harness.io/auth/#/signup/
 This is a sample app demonstrating Erlang Server SDK integration with CF in an Elixir app.
 
 ## Requirements
-Elixir
-Erlang
+- Elixir
+- Erlang
 
 ## To use this application, follow the steps as below ##
 
