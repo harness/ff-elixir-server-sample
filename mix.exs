@@ -21,7 +21,7 @@ defmodule Elixirsample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:cfclient, git: "https://github.com/harness/ff-erlang-server-sdk", tag: "0.1.0"}
+      {:cfclient, git: "https://github.com/harness/ff-erlang-server-sdk", tag: "0.2.0"}
     ]
   end
 end
