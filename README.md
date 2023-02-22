@@ -19,10 +19,8 @@ This is a sample app demonstrating Erlang Server SDK integration with CF in an E
 1) Create a project in Harness with Feature-flags module enabled
 2) Create an environment within your project
 3) Create a server-side sdk key in your environment **COPY the value from the Admin Console to your clipboard since this value will only be displayed once**
-4) Create a boolean feature-flag in the admin console
+4) Create a boolean feature-flag in the admin console called `harnessappdemodarkmode`
 5) Import the Elixir project in an IDE such as [IntelliJ](https://www.jetbrains.com/idea/)
-6) Replace the values for SDK Key and feature-flag identifier in the example program from step 3 and 4
-7) Run the program from the IDE
 
 We are using the Erlang SDK as dependency for this sample program
 
@@ -31,9 +29,9 @@ Install dependencies using [Mix](https://elixir-lang.org/getting-started/mix-otp
 mix deps.get
 ````
 
-Set Environment variable with SDK Key from `step 3` above.
-```shell
-export FF_API_KEY=YOUR_SDK_KEY
+In your `config.exs` add your server-side sdk key from `step 3` above.
+```Elixir
+config :cfclient, api_key: "YOUR_API_KEY"
 ````
 
 Compile the application
@@ -46,12 +44,7 @@ Start the Elixir CLI
 iex -S mix
 ```
 
-Start the App and save the bucket pid
-```shell
-iex> {:ok, pid} = Elixirsample.start
-```
-
 Start the loop to print the flag value every 10 seconds
 ```shell
-iex> Elixirsample.getFlagLoop(pid)
+iex(1)> Elixirsample.getFlagLoop()
 ```
