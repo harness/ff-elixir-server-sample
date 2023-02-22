@@ -1,27 +1,22 @@
 defmodule Elixirsample do
+  require Logger
 
-  def getFlagLoop(pid) do
-    x = true
-    y = true
+  def getFlagLoop() do
     target = %{
       identifier: "harness",
       name: "Harness",
       anonymous: false,
       attributes: %{}
     }
-    result = FFHelper.bool_variation(pid, "harnessappdemodarkmode", target, false)
 
-    IO.puts "Flag: #{result}"
+    flag_identifier = "harnessappdemodarkmode"
+    result = :cfclient.bool_variation(flag_identifier, target, false)
+
+    Logger.info(
+      "Variation for Flag #{flag_identifier} with Target #{inspect(target)} is: #{result}"
+    )
+
     Process.sleep(10000)
-
-    if x != y do
-      IO.puts "End of Loop"
-    else
-      getFlagLoop(pid)
-    end
-  end
-
-  def start do
-    FFHelper.start_link()
+    getFlagLoop()
   end
 end
