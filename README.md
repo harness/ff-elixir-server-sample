@@ -68,5 +68,5 @@ iex -S mix
 
 Start the loop to print the flag value every 10 seconds
 ```shell
-iex(1)> Elixirsample.getFlagLoop()
+iex(1)> ElixirSample.EvaluationSample.getFlagLoop()
 ```
