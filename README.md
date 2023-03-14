@@ -38,7 +38,7 @@ Optional: to run multiple instances of the SDK for different projects you have o
 
 ```Elixir
 # For more complex applications where you need to use multiple Harness projects, you can start up additional
-# SDK instances for each project.
+# SDK instances for each project by defining the below config and adding each instance to one of your application supervisors (e.g. the root supervisor)
 
 # Instance for project 1
 config :elixirsample,  project1:
@@ -54,7 +54,7 @@ config :elixirsample,  project2:
   config: [name: :project2]
 ]")
 ````
-See `supervisor.ex` which adds the above instances to this application's supervisor. 
+See `supervisor.ex` which adds the above instances to this application's root supervisor. 
 
 Compile the application
 ```shell
