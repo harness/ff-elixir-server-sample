@@ -9,7 +9,7 @@ config :cfclient,
         config: [config_url: "https://config.ff.harness.io/api/1.0"]]
 
 # For more complex applications where you need to use multiple Harness projects, you can start up additional
-# SDK instances for each project. 
+# SDK instances for each project.
 
 # Instance for project 1
 config :elixirsample,  project1:

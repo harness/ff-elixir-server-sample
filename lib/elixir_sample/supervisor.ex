@@ -9,12 +9,8 @@ defmodule ElixirSample.Supervisor do
 
 
   def init(_opts) do
-
     project_1_config = Application.get_env(:elixirsample, :project1, [])
-
     project_2_config = Application.get_env(:elixirsample, :project2, [])
-
-
     children = [
       %{
         id: :project1_cfclient_instance,
@@ -27,16 +23,6 @@ defmodule ElixirSample.Supervisor do
         type: :supervisor
       },
     ]
-
-
-#    children = [
-##      %{
-##        id: :project1_cfclient_instance,
-##        start: {:cfclient_instance, :start_link, [harness_args]},
-##        type: :supervisor
-##      },
-#    ]
-
     Supervisor.init(children, strategy: :one_for_one)
   end
 
