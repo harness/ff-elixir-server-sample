@@ -1,4 +1,4 @@
-defmodule Elixirsample do
+defmodule ElixirSample.EvaluationSample do
   require Logger
 
   def getFlagLoop() do
