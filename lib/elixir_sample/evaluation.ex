@@ -10,7 +10,7 @@ defmodule ElixirSample.EvaluationSample do
     }
 
     flag_identifier = "harnessappdemodarkmode"
-    result = :cfclient.bool_variation(flag_identifier, target, false)
+    result = :cfclient.bool_variation(:project1, flag_identifier, target, false)
 
     Logger.info(
       "Variation for Flag #{flag_identifier} with Target #{inspect(target)} is: #{result}"

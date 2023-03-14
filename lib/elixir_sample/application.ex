@@ -1,4 +1,5 @@
 defmodule ElixirSample.Application do
+  require Logger
 
   use Application
 
