@@ -10,7 +10,7 @@ defmodule ElixirSample.Supervisor do
 
   def init(_opts) do
 
-    harness_args = Application.get_env(:cfclient, , [])
+    harness_args = Application.get_env(:cfclient, :harness_project_1_config, [])
     children = [
       %{
         id: :project1_cfclient_instance,
