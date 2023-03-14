@@ -31,7 +31,7 @@ mix deps.get
 
 In your `config.exs` add your server-side sdk key from `step 3` above.
 ```Elixir
-config :cfclient, api_key: System.get_env("HARNESS_API_KEY")
+config :cfclient, api_key: System.get_env("FF_API_KEY_0")
 ````
 
 Optional: to run multiple instances of the SDK for different projects you have on Harness, provide additional `project_config` options:
@@ -43,14 +43,14 @@ Optional: to run multiple instances of the SDK for different projects you have o
 # Instance for project 1
 config :elixirsample,  project1:
        [
-        api_key: System.get_env("HARNESS_PROJECT_1_KEY"),
+        api_key: System.get_env("FF_API_KEY_1"),
         config: [name: :project1]
        ]
 
 # Instance for project 2
 config :elixirsample,  project2:
   [
-  api_key: System.get_env("HARNESS_PROJECT_2_KEY"),
+  api_key: System.get_env("FF_API_KEY_2"),
   config: [name: :project2]
 ]")
 ````
