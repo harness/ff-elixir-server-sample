@@ -1,4 +1,4 @@
-defmodule Elixirsample.MixProject do
+defmodule ElixirSample.MixProject do
   use Mix.Project
 
   def project do
@@ -14,6 +14,7 @@ defmodule Elixirsample.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {ElixirSample.Application, []},
       extra_applications: [:logger]
     ]
   end
@@ -21,7 +22,7 @@ defmodule Elixirsample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:cfclient, github: "harness/ff-erlang-server-sdk", tag: "0.5.0-beta.1"}
+      {:cfclient, github: "harness/ff-erlang-server-sdk", tag: "main"}
     ]
   end
 end
