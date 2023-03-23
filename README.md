@@ -34,7 +34,7 @@ In your `config.exs` add your server-side sdk key from `step 3` above.
 config :cfclient, api_key: System.get_env("FF_API_KEY_0")
 ````
 
-Optional: to run multiple instances of the SDK for different projects you have on Harness, provide additional `project_config` options:
+Optional: to run [multiple instances of the SDK](https://github.com/harness/ff-erlang-server-sdk/blob/main/README.md#run-multiple-instances-of-the-sdk) for different projects you have on Harness, provide additional config for each additional instance:
 
 ```Elixir
 # For more complex applications where you need to use multiple Harness projects, you can start up additional
