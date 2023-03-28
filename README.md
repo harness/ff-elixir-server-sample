@@ -66,6 +66,13 @@ Start the Elixir CLI
 iex -S mix
 ```
 
+If running just the default instance:
+Start the loop to print the flag value every 10 seconds
+```shell
+iex(1)> ElixirSample.EvaluationSample.getFlagLoop()
+```
+
+If running multiple instance:
 Start the loop to print the flag value every 10 seconds
 ```shell
 iex(1)> ElixirSample.EvaluationSample.getFlagLoop()
