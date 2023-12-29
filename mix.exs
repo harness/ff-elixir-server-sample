@@ -22,7 +22,7 @@ defmodule ElixirSample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:cfclient, "~> 1.1", hex: :harness_ff_erlang_server_sdk}
+      {:cfclient, "~> 3.0", hex: :harness_ff_erlang_server_sdk}
     ]
   end
 end

@@ -1,7 +1,43 @@
 defmodule ElixirSample.EvaluationSample do
   require Logger
 
-  def getFlagLoop() do
+  def bucketByEvaluation(flag) do
+    targetIdentifier = "harness"
+
+    # This target will deterministically get the same evaluation for a given flag.
+    # If a different flag is used, it will still be deterministic but will be a different bucket.
+    # To get the same evaluation per flag, you can simply remove the flag from the attribute.
+    target = %{
+      identifier: targetIdentifier,
+      name: "Harness",
+      anonymous: false,
+      attributes: %{myBucketByAttribute: targetIdentifier <> flag}
+    }
+
+    result = :cfclient.bool_variation(flag, target, false)
+
+    Logger.info(
+      "SVariation for Flag #{flag} with Target #{inspect(target)} is: #{result}"
+    )
+  end
+
+  def singleInstanceFlagEvaluation() do
+    target = %{
+      identifier: "harness",
+      name: "Harness",
+      anonymous: false,
+      attributes: %{}
+    }
+
+    flag = "projectflag"
+    result = :cfclient.bool_variation(flag, target, false)
+
+    Logger.info(
+      "SVariation for Flag #{flag} with Target #{inspect(target)} is: #{result}"
+    )
+  end
+
+  def multiInstanceFlagEvaluation() do
     target = %{
       identifier: "harness",
       name: "Harness",
@@ -34,6 +70,6 @@ defmodule ElixirSample.EvaluationSample do
     )
 
     Process.sleep(10000)
-    getFlagLoop()
+    multiInstanceFlagEvaluation()
   end
 end
